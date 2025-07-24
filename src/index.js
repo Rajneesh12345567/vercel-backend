@@ -18,6 +18,10 @@ if (!process.env.JWT_SECRET) {
   process.exit(1);
 }
 
+app.get('/', (req, res) => {
+  res.send('✅ Backend is working! 🚀');
+});
+
 // ✅ Allowed Origins
 const allowedOrigins = [
   "http://localhost:5173",
